@@ -1,0 +1,251 @@
+@media (min-width: 0) and (max-width: 959px) {
+  .main-navigation .site-wrapper {
+    @include flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .main-navigation__button {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    margin: 20px 40px 20px 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .main-navigation__wrapper {
+    width: 100%;
+    box-shadow: 0 -1px rgba(0, 0, 0, 1);
+  }
+
+  //  стили для js гл.меню
+
+  .main-navigation--closed .main-navigation__button {
+    &::before,
+    &::after {
+      @include pseudo;
+      right: 0;
+      width: 50px;
+      height: 4px;
+      background-color: #ffffff;
+    }
+
+    &::before {
+      top: 21px;
+      box-shadow: 0 -10px 0 0 #ffffff;
+    }
+
+    &::after {
+      top: 1px;
+      box-shadow: none;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: $button-color;
+    }
+
+    &:hover::before {
+      box-shadow: 0 -10px 0 0 $button-color;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba($button-color, 0.3);
+    }
+
+    &:active::before {
+      box-shadow: 0 -10px 0 0 rgba($button-color, 0.3);
+    }
+  }
+
+  .main-navigation--opened .main-navigation__button {
+    width: 20px;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      top: 10px;
+      right: -4px;
+      width: 30px;
+      height: 4px;
+      background-color: #ffffff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(135deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: $button-color;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba($button-color, 0.3);
+    }
+  }
+
+  .main-navigation--closed {
+    position: relative;
+    min-height: 66px;
+    background-color: $background-color;
+    margin-bottom: 1px;
+    z-index: 1;
+  }
+
+  .main-navigation--opened,
+  .main-navigation--nojs {
+    position: relative;
+    min-height: 200px;
+    background-color: $background-color;
+    z-index: 1;
+  }
+
+  .main-navigation--nojs {
+    margin-bottom: 0;
+  }
+
+  .main-navigation--closed .main-navigation__logo-link {
+    margin: 16px 0 14px 20px;
+  }
+
+  .main-navigation--opened .main-navigation__logo-link,
+  .main-navigation--nojs .main-navigation__logo-link {
+    margin: 16px 0 14px 20px;
+  }
+
+  .main-navigation--closed .main-navigation__wrapper {
+    display: none;
+  }
+
+  .main-navigation--nojs .main-navigation__wrapper {
+    display: block;
+  }
+
+  .main-navigation--nojs .main-navigation__button {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: 959px) {
+  .main-navigation__logo-desktop,
+  .main-navigation__logo-glass {
+    display: none;
+  }
+
+  .main-navigation__logo-tablet {
+    display: block;
+  }
+
+  //  стили для js гл.меню
+
+  .main-navigation--closed {
+    min-height: 110px;
+  }
+
+  .main-navigation--closed .main-navigation__logo-link {
+    margin: 27px 0 36px 20px;
+  }
+
+  .main-navigation--opened .main-navigation__logo-link {
+    margin: 27px 0 36px 20px;
+  }
+
+  .main-navigation--closed .main-navigation__button {
+    margin: 43px 20px 0 0;
+  }
+
+  .main-navigation--opened .main-navigation__button {
+    margin: 44px 20px 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation {
+    position: relative;
+
+    @include flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 1200px;
+    min-height: 108px;
+    margin: 0 auto;
+    padding: 28px 119px 29px;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .main-navigation .site-wrapper {
+    width: 229px;
+  }
+
+  .main-navigation__logo-tablet {
+    display: none;
+  }
+
+  .main-navigation__logo-header {
+    width: 147px;
+    height: 40px;
+    margin-bottom: 7px;
+  }
+
+  .main-navigation__logo-mobile,
+  .main-navigation__logo-glass {
+    fill: $text-white;
+  }
+
+  .main-navigation__logo-desktop {
+    fill: $text-grey;
+  }
+
+  .main-navigation__logo-link:hover .main-navigation__logo-mobile,
+  .main-navigation__logo-link:hover .main-navigation__logo-glass {
+    fill: $text-grey;
+  }
+
+  .main-navigation__logo-link:hover:not([href]) .main-navigation__logo-mobile,
+  .main-navigation__logo-link:hover:not([href]) .main-navigation__logo-glass {
+    fill: $text-white;
+  }
+
+  .main-navigation__logo-link:active .main-navigation__logo-mobile,
+  .main-navigation__logo-link:active .main-navigation__logo-glass,
+  .main-navigation__logo-link:active .main-navigation__logo-desktop, {
+    fill: rgba($text-white, 0.3);
+  }
+
+  .main-navigation__logo-link:active:not([href]) .main-navigation__logo-mobile,
+  .main-navigation__logo-link:active:not([href]) .main-navigation__logo-glass {
+    fill: $text-white;
+  }
+
+  .main-navigation__logo-link:hover:not([href]) .main-navigation__logo-desktop,
+  .main-navigation__logo-link:active:not([href]) .main-navigation__logo-desktop {
+    fill: $text-grey;
+  }
+
+  /* stylelint-disable */
+  :-ms-fullscreen, :root .main-navigation__logo-link {
+    margin-top: 20px;
+    margin-bottom: 23px;
+  }
+  /* stylelint-enable */
+
+  .main-navigation__logo-link {
+    margin: 27px 0 auto 10px;
+  }
+
+  .main-navigation__button {
+    display: none;
+  }
+}

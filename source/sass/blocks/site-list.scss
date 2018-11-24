@@ -1,0 +1,93 @@
+.site-list {
+  @include flex($flex-direction: column);
+  @include list;
+}
+
+.site-list__item {
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.15),
+    inset 0 -1px rgba(0, 0, 0, 1);
+}
+
+.site-list__link {
+  @include flex;
+  @include link;
+  justify-content: center;
+  font-size: $body-font-size + 4px;
+  line-height: $body-line-height + 8px;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  padding: 16px 0;
+  width: 100%;
+
+  &:hover {
+    color: $button-color;
+  }
+
+  &:hover:not([href]) {
+    color: $text-white;
+  }
+
+  &:active {
+    color: $button-color;
+    opacity: 0.3;
+  }
+
+  &:active:not([href]) {
+    color: $text-white;
+    opacity: 1;
+  }
+
+  &--active {
+    color: $button-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    @include flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 720px;
+    margin: 2px 12px 2px auto;
+  }
+
+  .site-list__item {
+    margin-left: 80px;
+    box-shadow: none;
+  }
+
+  .site-list__link {
+    font-size: $body-font-size + 4px;
+    line-height: $body-line-height - 6px;
+    font-weight: $font-normal;
+    text-transform: none;
+    padding-bottom: 12px;
+
+    &:not([href]) {
+      color: $text-white;
+    }
+
+    &:hover {
+      color: $text-grey;
+    }
+
+    &:hover:not([href]) {
+      color: $text-white;
+    }
+
+    &:active {
+      color: $text-white;
+      opacity: 0.3;
+    }
+
+    &:active:not([href]) {
+      color: $text-white;
+      opacity: 1;
+    }
+
+    &--active {
+      box-shadow: 0 3px 0 -1px white;
+    }
+  }
+}

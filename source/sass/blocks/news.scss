@@ -1,0 +1,28 @@
+.news {
+  margin-top: 40px;
+}
+
+.news__list {
+  @include list;
+}
+
+.news__item {
+  display: block;
+  text-align: center;
+}
+
+.news__title {
+  font-size: $body-font-size + 15px;
+  line-height: $body-line-height + 12px;
+  font-weight: $font-bold;
+  color: $background-color;
+}
+
+.news__description {
+  font-size: $body-font-size;
+  line-height: $body-line-height - 4px;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  color: $background-color;
+  margin: 5px 0 30px;
+}

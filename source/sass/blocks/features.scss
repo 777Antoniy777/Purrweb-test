@@ -1,0 +1,35 @@
+.features {
+  margin-top: 50px;
+}
+
+.features__list {
+  @include list;
+}
+
+.features__title {
+  position: relative;
+  font-size: $body-font-size + 15px;
+  line-height: $body-line-height + 13px;
+  font-weight: $font-bold;
+  text-align: right;
+  color: $background-color;
+
+  &::before {
+    @include pseudo;
+    top: -11px;
+    right: -22px;
+    width: 21px;
+    height: 6px;
+    background-color: $button-color;
+  }
+
+  &::after  {
+    @include pseudo;
+    top: -3px;
+    right: -31px;
+    width: 21px;
+    height: 6px;
+    background-color: $button-color;
+    transform: rotate(90deg);
+  }
+}

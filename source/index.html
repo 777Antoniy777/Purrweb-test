@@ -5,10 +5,14 @@
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/style.min.css" rel="stylesheet">
-    <link href="/fonts/opensans.woff2" as="font" rel="preload">
-    <link href="/fonts/opensansbold.woff2" as="font" rel="preload">
-    <link href="/fonts/opensanslight.woff2" as="font" rel="preload">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="/fonts/ProximaNova-Bold.woff2" as="font" rel="preload">
+    <link href="/fonts/ProximaNova-Semibold.woff2" as="font" rel="preload">
+    <link href="/fonts/ProximaNova-Regular.woff2" as="font" rel="preload">
+    <link href="/fonts/Raleway-ExtraBold.woff2" as="font" rel="preload">
+    <link href="/fonts/Raleway-SemiBold.woff2" as="font" rel="preload">
+    <link href="/fonts/Raleway-Regular.woff2" as="font" rel="preload">
+    <link href="/fonts/MyriadPro-Regular.woff2" as="font" rel="preload">
     <script>
       // Picture element HTML5 shiv
       document.createElement("picture");
@@ -23,7 +27,7 @@
         <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <div class="site-wrapper">
             <a class="main-navigation__logo-link">
-            <img src="img/svg/Logo.png" width="78" height="100" alt="Логотип Salt">
+            <img src="img/svg/Logo.png" width="60" height="80" alt="Логотип Salt">
             </a>
             <button class="main-navigation__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
           </div>
@@ -39,9 +43,9 @@
           </div>
         </nav>
       </div>
-      <!--Превью-->
-      <div class="site-wrapper">
+      <!--Предложения-->
         <section class="offers">
+            <div class="site-wrapper">
           <h2 class="visually-hidden">Наши предложения</h2>
           <input type="radio" name="first-slider" id="first-slider-first-button" checked>
           <input type="radio" name="first-slider" id="first-slider-second-button">
@@ -51,41 +55,60 @@
               <li class="offers__item offers-slider__item">
                 <div>
                   <h3 class="offers-slider__title">Device Authentication</h3>
-                  <p class="offers-slider__description"><span>Salt</span>Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
-                  <a class="offers-slider__link" href="#">Get started</a>
+                  <p class="offers-slider__description"><span>Salt</span> Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
+                  <div class="offers-slider__link-wrapper">
+                    <a class="offers-slider__link" href="#">Get started</a>
+                  </div>
                 </div>
               </li>
               <li class="offers__item offers-slider__item">
                 <div>
                   <h3 class="offers-slider__title">Device Authentication</h3>
-                  <p class="offers-slider__description"><span>Salt</span>Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
-                  <a class="offers-slider__link" href="#">Get started</a>
+                  <p class="offers-slider__description"><span>Salt</span> Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
+                  <div class="offers-slider__link-wrapper">
+                    <a class="offers-slider__link" href="#">Get started</a>
+                  </div>
                 </div>
               </li>
               <li class="offers__item offers-slider__item">
                 <div>
                   <h3 class="offers-slider__title">Device Authentication</h3>
-                  <p class="offers-slider__description"><span>Salt</span>Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
-                  <a class="offers-slider__link" href="#">Get started</a>
+                  <p class="offers-slider__description"><span>Salt</span> Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
+                  <div class="offers-slider__link-wrapper">
+                    <a class="offers-slider__link" href="#">Get started</a>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
           <div class="offers__buttons">
-            <label for="first-slider-first-button"><span class="visually-hidden">Первый слайд</span></label>
-            <label for="first-slider-second-button"><span class="visually-hidden">Второй слайд</span></label>
-            <label for="first-slider-third-button"><span class="visually-hidden">Третий слайд</span></label>
+            <label for="first-slider-first-button">
+              <span class="visually-hidden">Первый слайд</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16.56" height="18.813"><path data-name="Polygon 1" d="M8.29 17.821L1 13.621V5.21l7.29-4.2 7.28 4.2v8.411z"/></svg>
+            </label>
+            <label for="first-slider-second-button">
+              <span class="visually-hidden">Второй слайд</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16.56" height="18.813"><path data-name="Polygon 1" d="M8.29 17.821L1 13.621V5.21l7.29-4.2 7.28 4.2v8.411z"/></svg>
+            </label>
+            <label for="first-slider-third-button">
+              <span class="visually-hidden">Третий слайд</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16.56" height="18.813"><path data-name="Polygon 1" d="M8.29 17.821L1 13.621V5.21l7.29-4.2 7.28 4.2v8.411z"/></svg>
+            </label>
           </div>
           <div class="offers__add">
             <p class="offers__add-description">Find out more</p>
-            <a class="offers__add-link" href="#"><span class="visually-hidden">Показать больше</span></a>
+            <a class="offers__add-link" href="#">
+              <span class="visually-hidden">Показать больше</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35"><path data-name="Polygon 1" d="M8.29 17.821L1 13.621V5.21l7.29-4.2 7.28 4.2v8.411z"/></svg>
+            </a>
           </div>
+            </div>
         </section>
-      </div>
     </header>
     <!--Основная часть гл.стр-->
     <main>
       <!--Новости-->
+      <div class="site-wrapper">
       <section class="news">
         <h2 class="visually-hidden">Новости нашей компании</h2>
         <ul class="news__list">
@@ -103,7 +126,9 @@
           </li>
         </ul>
       </section>
+    </div>
       <!--Особенности-->
+      <div class="site-wrapper">
       <section class="features">
         <h2 class="features__title">What We Do</h2>
         <ul class="features__list">
@@ -139,6 +164,7 @@
           </li>
         </ul>
       </section>
+    </div>
       <!--Продукт-->
       <section class="product">
         <div class="product__wrapper">
