@@ -1,0 +1,18 @@
+.main__inner-wrapper {
+  position: relative;
+  background-image: url("../img/overlay.jpg");
+  background-position: -97px 0;
+  background-repeat: no-repeat;
+  background-size: 1167px 909px;
+  width: 100%;
+  min-height: 140px;
+
+  &::before {
+    @include pseudo;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($background-color, 0.8);
+  }
+}

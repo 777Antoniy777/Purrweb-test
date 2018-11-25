@@ -5,7 +5,7 @@
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link href="/fonts/ProximaNova-Bold.woff2" as="font" rel="preload">
     <link href="/fonts/ProximaNova-Semibold.woff2" as="font" rel="preload">
     <link href="/fonts/ProximaNova-Regular.woff2" as="font" rel="preload">
@@ -27,7 +27,9 @@
         <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <div class="site-wrapper">
             <a class="main-navigation__logo-link">
-            <img src="img/svg/Logo.png" width="60" height="80" alt="Логотип Salt">
+              <svg width="46.21" height="56.753">
+                <use xlink:href="#logo-header"/>
+              </svg>
             </a>
             <button class="main-navigation__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
           </div>
@@ -106,7 +108,7 @@
         </section>
     </header>
     <!--Основная часть гл.стр-->
-    <main>
+    <main class="main">
       <!--Новости-->
       <div class="site-wrapper">
       <section class="news">
@@ -133,32 +135,44 @@
         <h2 class="features__title">What We Do</h2>
         <ul class="features__list">
           <li class="features__item">
-            <img src="#" width="50" height="50" alt="">
+            <svg width="120" height="124">
+              <use xlink:href="#icon-features-1"/>
+            </svg>
             <h3 class="features__item-title">Device authentication</h3>
             <p class="features__item-description">Hardware-based device fingerprinting resilient to cloning, malware and device jailbreak/root. Hardware-level control over the displayed UI independent of the device operating system. Hardware-level data protection.</p>
           </li>
           <li class="features__item">
-            <img src="#" width="50" height="50" alt="">
+            <svg width="120" height="124">
+              <use xlink:href="#icon-features-2"/>
+            </svg>
             <h3 class="features__item-title">User authentication</h3>
             <p class="features__item-description">Verify the identity of users for access control with contemporary biometric connected MFA security tokens.</p>
           </li>
           <li class="features__item">
-            <img src="#" width="50" height="50" alt="">
+            <svg width="120" height="124">
+              <use xlink:href="#icon-features-3"/>
+            </svg>
             <h3 class="features__item-title">Transaction authentication</h3>
             <p class="features__item-description">High assurance out-of-band authentication of high impact transactions and instructions initiated through electronic service delivery channels. Audit trail of verification for non-repudiation. Fraud protection against man-in-the-middle and browser malware.</p>
           </li>
           <li class="features__item">
-            <img src="#" width="50" height="50" alt="">
+            <svg width="120" height="124">
+              <use xlink:href="#icon-features-4"/>
+            </svg>
             <h3 class="features__item-title">Contemporary authentication methods</h3>
             <p class="features__item-description">Echidna authentication server to enable adaptive risk-based approach to security through a range of methods for different levels of authentication assurance from SMS OTPs, Challenge/Response, to more contemporary QR code signing and advanced connected mobile security tokens capable of transaction signatures with dynamic linking of the transaction context and addition of PIN, Fingerprint and other biometrics.</p>
           </li>
           <li class="features__item">
-            <img src="#" width="50" height="50" alt="">
+            <svg width="120" height="80">
+              <use xlink:href="#icon-features-5"/>
+            </svg>
             <h3 class="features__item-title">HSM solutions</h3>
             <p class="features__item-description">Reseller of Thales nShield HSMs with professional services and subject matter expertise in HSMs, key ceremony procedures, and SEE code development.</p>
           </li>
           <li class="features__item">
-            <img src="#" width="50" height="50" alt="">
+            <svg width="120" height="80">
+              <use xlink:href="#icon-features-6"/>
+            </svg>
             <h3 class="features__item-title">Cloud & iot security</h3>
             <p class="features__item-description">Secure the identity and access of users, devices and Internet of Things connecting into the cloud. Support cloud adoption and migration of applications and data into private and public clouds.</p>
           </li>
@@ -166,22 +180,39 @@
       </section>
     </div>
       <!--Продукт-->
+      <div class="main__inner-wrapper">
+      <div class="site-wrapper">
       <section class="product">
         <div class="product__wrapper">
           <h3 class="product__title">Product Spotlight</h3>
           <p class="product__description">Salt mSign Connected Token is a contemporary mobile security 2FA token for authentication of user identity and verification of transactions independent of the delivery channel that initiated the request.</p>
-          <a class="product__link">More info</a>
+          <div class="product__link-wrapper">
+            <a class="product__link" href="#">More info</a>
+          </div>
         </div>
-        <video class="product__video" width="724" height="452" poster="#" controls="controls">
+        <div class="product__video-wrapper">
+        <div class="product__video-inner-wrapper">
+          <button class="product__video-button"><span class="visually-hidden">Нажмите, для воспроизведения</span></button>
+          <p class="product__video-description product__video-description--first">Feature video</p>
+          <p class="product__video-description product__video-description--second">Msign connected token</p>
+        </div>
+        <video class="product__video" width="90%" height="252" poster="img/preview.jpg">
           <source src="#" type="#">
         </video>
+      </div>
       </section>
+    </div>
       <!--Сотрудничество-->
       <section class="cooperation">
+        <div class="site-wrapper">
         <h2 class="visually-hidden">Сотрудничество с нашей компанией</h2>
-        <p>Ready to get started?</p>
-        <a href="#">Contact us</a>
+        <p class="cooperation__description">Ready to get started?</p>
+        <div class="cooperation__link-wrapper">
+        <a class="cooperation__link" href="#">Contact us</a>
+        </div>
+        </div>
       </section>
+    </div>
     </main>
     <!--Футер гл.стр-->
     <div class="site-wrapper">
@@ -190,7 +221,7 @@
           <div class="main-footer__social social">
             <h2 class="visually-hidden">Мы в Twitter!</h2>
             <div class="social__wrapper">
-              <a class="social__link" href="#"><span>Twitter @saltgroup</span></a>
+              <a class="social__link" href="#"><span class="visually-hidden">Twitter @saltgroup</span></a>
               <p class="social__description">
                 <a class="social__link social__link--twit" href="#">@saltgroup</a>
                 <span class="social__description social__description--twit">Twitter feed</span>

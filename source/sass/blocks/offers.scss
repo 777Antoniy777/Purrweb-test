@@ -77,12 +77,13 @@
   font-size: $body-font-size - 3px;
   line-height: $body-line-height - 8px;
   font-weight: $font-bold;
-  width: 160px;
-  min-height: 40px;
+  width: 130px;
+  min-height: 30px;
   text-transform: uppercase;
   text-align: center;
   background-color: $button-color;
   border-radius: 5px;
+  padding: 5px 15px;
   margin-right: auto;
 }
 

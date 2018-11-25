@@ -1,5 +1,5 @@
 .features {
-  margin-top: 50px;
+  margin: 50px 0 50px;
 }
 
 .features__list {
@@ -32,4 +32,25 @@
     background-color: $button-color;
     transform: rotate(90deg);
   }
+}
+
+.features__item {
+  text-align: center;
+}
+
+.features__item-title {
+  font-size: $body-font-size + 5px;
+  line-height: $body-line-height + 2px;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  color: $background-color;
+  margin-top: 5px;
+}
+
+.features__item-description {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  font-weight: $font-normal;
+  color: $text-grey;
+  margin-bottom: 40px;
 }

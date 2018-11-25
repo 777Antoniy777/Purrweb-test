@@ -1,0 +1,98 @@
+.product {
+  position: relative;
+  text-align: left;
+  padding-top: 20px;
+  z-index: 2;
+}
+
+.product__wrapper {
+  margin: 0 20px;
+}
+
+.product__title {
+  font-size: $body-font-size + 15px;
+  line-height: $body-line-height + 13px;
+  font-weight: $font-bold;
+  color: $text-white;
+  margin-bottom: 0;
+}
+
+.product__description {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  font-weight: $font-normal;
+  color: $text-white;
+  margin-right: 30px;
+}
+
+.product__link-wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.product__link {
+  @include link;
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $body-font-size - 3px;
+  line-height: $body-line-height - 8px;
+  font-weight: $font-bold;
+  width: 130px;
+  min-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $button-color;
+  border-radius: 5px;
+  margin-right: auto;
+  padding: 5px 15px;
+}
+
+.product__video-wrapper {
+  position: relative;
+}
+
+.product__video {
+  @include flex;
+  margin: 0 auto;
+}
+
+.product__video-inner-wrapper {
+  position: absolute;
+  text-align: center;
+  top: 89px;
+  left: 20%;
+  z-index: 1;
+}
+
+.product__video-button {
+  background-image: url("../img/icon-play.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+.product__video-description {
+  font-family: "Raleway", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $text-white;
+
+  &--first {
+    font-size: $body-font-size - 6px;
+    line-height: $body-line-height - 14px;
+    font-weight: $font-semibold;
+    margin: 10px 0 0;
+  }
+
+  &--second {
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    font-weight: $font-extrabold;
+    margin: 5px 0 0;
+  }
+}
