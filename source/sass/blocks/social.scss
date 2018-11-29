@@ -1,0 +1,90 @@
+.social {
+  font-family: "Myriad Pro", "Arial", sans-serif;
+  width: 300px;
+  min-height: 295px;
+  background-color: $text-white;
+}
+
+.social__wrapper {
+  @include flex;
+  width: 300px;
+  min-height: 60px;
+  flex-wrap: nowrap;
+  background-color: $background-color;
+}
+
+.social__link {
+  @include flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  min-height: 60px;
+  background-color: #5634d1;
+
+  &::before {
+    @include pseudo;
+    top: 50%;
+    left: 49.5%;
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    border: 2px solid $text-white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--twit {
+    @include link;
+    justify-content: flex-start;
+    font-size: $body-font-size + 9px;
+    line-height: $body-line-height + 2px;
+    min-width: inherit;
+    min-height: 5px;
+    background-color: inherit;
+    margin-left: 20px;
+    // word-break: break-all;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.social__description {
+  @include flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 240px;
+  margin: 12px 5px 8px 0;
+  box-sizing: border-box;
+
+  &--twit {
+    font-size: $body-font-size - 1px;
+    line-height: $body-line-height - 2px;
+    margin: 0;
+    margin-left: 20px;
+  }
+}
+
+.social__list {
+  @include list;
+}
+
+.social__item-description {
+  font-size: $body-font-size - 1px;
+  line-height: $body-line-height - 2px;
+  color: #999999;
+
+  &--time {
+    font-size: $body-font-size - 3px;
+    line-height: $body-line-height - 2px;
+    color: #555555;
+  }
+}
+
+.social__item-link {
+  @include link(underline, $background-color);
+  font-size: $body-font-size - 1px;
+  line-height: $body-line-height - 2px;
+}

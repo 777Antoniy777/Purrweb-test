@@ -61,7 +61,8 @@
   position: absolute;
   text-align: center;
   top: 89px;
-  left: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -80,6 +81,7 @@
 .product__video-description {
   font-family: "Raleway", "Arial", sans-serif;
   text-transform: uppercase;
+  min-width: 200px;
   color: $text-white;
 
   &--first {

@@ -181,8 +181,9 @@
     </div>
       <!--Продукт-->
       <div class="main__inner-wrapper">
-      <div class="site-wrapper">
+      
       <section class="product">
+          <div class="site-wrapper">
         <div class="product__wrapper">
           <h3 class="product__title">Product Spotlight</h3>
           <p class="product__description">Salt mSign Connected Token is a contemporary mobile security 2FA token for authentication of user identity and verification of transactions independent of the delivery channel that initiated the request.</p>
@@ -190,6 +191,7 @@
             <a class="product__link" href="#">More info</a>
           </div>
         </div>
+          </div>
         <div class="product__video-wrapper">
         <div class="product__video-inner-wrapper">
           <button class="product__video-button"><span class="visually-hidden">Нажмите, для воспроизведения</span></button>
@@ -201,7 +203,7 @@
         </video>
       </div>
       </section>
-    </div>
+    
       <!--Сотрудничество-->
       <section class="cooperation">
         <div class="site-wrapper">
@@ -215,13 +217,18 @@
     </div>
     </main>
     <!--Футер гл.стр-->
-    <div class="site-wrapper">
       <footer class="main-footer">
+          <div class="site-wrapper">
         <div class="main-footer__wrapper">
           <div class="main-footer__social social">
             <h2 class="visually-hidden">Мы в Twitter!</h2>
             <div class="social__wrapper">
-              <a class="social__link" href="#"><span class="visually-hidden">Twitter @saltgroup</span></a>
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Twitter @saltgroup</span>
+                <svg width="17" height="14">
+                  <use xlink:href="#icon-twitter"/>
+                </svg>
+              </a>
               <p class="social__description">
                 <a class="social__link social__link--twit" href="#">@saltgroup</a>
                 <span class="social__description social__description--twit">Twitter feed</span>
@@ -277,12 +284,14 @@
             <img src="#" width="75" height="86" alt="Логотип Salt">
             </a>
           </div>
-          <div class="main-footer__copyright-wrapper">
-            <p class="main-footer__copyright-description">© 2017 salt group<span>all rights reserved. website by dorne creative.</span></p>
-          </div>
         </div>
+          </div>
+          <div class="main-footer__copyright-wrapper">
+              <div class="site-wrapper">
+            <p class="main-footer__copyright-description">© 2017 salt group<span>all rights reserved. website by dorne creative.</span></p>
+            </div>
+          </div>
       </footer>
-    </div>
     <div style="display: none;">
       <include src="build/img/svg-sprite.svg"></include>
     </div>
