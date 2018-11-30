@@ -34,4 +34,28 @@
   background-color: $button-color;
   border-radius: 5px;
   padding: 5px 15px;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-active;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation {
+    margin-top: 30px;
+  }
+
+  .cooperation .site-wrapper {
+    width: 580px;
+    justify-content: space-between;
+  }
+
+  .cooperation__description {
+    width: 300px;
+    text-align: left;
+  }
 }

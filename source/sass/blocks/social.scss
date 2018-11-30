@@ -22,6 +22,14 @@
   min-height: 60px;
   background-color: #5634d1;
 
+  &:hover {
+    background-color: darken(#5634d1, 5%);
+  }
+
+  &:active {
+    background-color: darken(#5634d1, 10%);
+  }
+
   &::before {
     @include pseudo;
     top: 50%;
@@ -43,7 +51,17 @@
     min-height: 5px;
     background-color: inherit;
     margin-left: 20px;
-    // word-break: break-all;
+
+    &:hover {
+      color: $button-color;
+      background-color: inherit;
+    }
+
+    &:active {
+      color: $button-color;
+      opacity: 0.3;
+      background-color: inherit;
+    }
 
     &::before {
       content: none;
@@ -69,22 +87,62 @@
 
 .social__list {
   @include list;
+  padding-bottom: 5px;
+}
+
+.social__item {
+  padding: 0 37px 0 29px;
+  margin-bottom: 20px;
 }
 
 .social__item-description {
   font-size: $body-font-size - 1px;
   line-height: $body-line-height - 2px;
   color: #999999;
+  margin-bottom: 0;
 
   &--time {
     font-size: $body-font-size - 3px;
     line-height: $body-line-height - 2px;
     color: #555555;
+    margin-top: 0;
   }
 }
 
 .social__item-link {
-  @include link(underline, $background-color);
+  @include link(none, $background-color);
   font-size: $body-font-size - 1px;
   line-height: $body-line-height - 2px;
+  word-break: break-all;
+
+  &:hover {
+    color: $button-color;
+  }
+
+  &:active {
+    color: $button-color;
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    width: 580px;
+    min-height: 263px;
+  }
+
+  .social__wrapper {
+    width: 580px;
+  }
+
+  .social__description {
+    width: 510px;
+    box-sizing: border-box;
+  }
+
+  .social__link {
+    &--twit {
+      width: auto;
+    }
+  }
 }

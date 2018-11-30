@@ -13,6 +13,7 @@
   font-weight: $font-bold;
   text-align: right;
   color: $background-color;
+  margin-right: 24px;
 
   &::before {
     @include pseudo;
@@ -53,4 +54,32 @@
   font-weight: $font-normal;
   color: $text-grey;
   margin-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    width: 580px;
+    margin: 50px auto 50px;
+  }
+
+  .features__list {
+    @include flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 580px;
+  }
+
+  .features__item {
+    width: 260px;
+  }
+
+  .features__item-title {
+    min-height: 75px;
+    margin-bottom: 0;
+  }
+
+  .features__item-description {
+    text-align: left;
+    margin-top: 0;
+  }
 }

@@ -4,6 +4,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 1px;
   }
 
   .main-navigation__button {
@@ -18,7 +19,8 @@
 
   .main-navigation__wrapper {
     width: 100%;
-    box-shadow: 0 -1px rgba(0, 0, 0, 1);
+    box-shadow: 0 -1px $shadow-color;
+    margin-bottom: 1px;
   }
 
   //  стили для js гл.меню
@@ -97,9 +99,9 @@
   .main-navigation--closed {
     position: relative;
     min-height: 66px;
-    background-color: $background-color;
-    margin-bottom: 1px;
-    z-index: 1;
+    box-shadow: 0 1px $shadow-color;
+    margin-bottom: -94px;
+    z-index: 2;
   }
 
   .main-navigation--opened,
@@ -107,7 +109,8 @@
     position: relative;
     min-height: 200px;
     background-color: $background-color;
-    z-index: 1;
+    margin-bottom: -78px;
+    z-index: 2;
   }
 
   .main-navigation--nojs {
@@ -137,112 +140,58 @@
 }
 
 @media (min-width: $tablet-width) and (max-width: 959px) {
-  .main-navigation__logo-desktop,
-  .main-navigation__logo-glass {
-    display: none;
-  }
-
-  .main-navigation__logo-tablet {
-    display: block;
+  .main-navigation__logo-link img {
+    width: 70px;
+    height: 80px;
   }
 
   //  стили для js гл.меню
-
   .main-navigation--closed {
     min-height: 110px;
+    margin-bottom: -127px;
   }
 
-  .main-navigation--closed .main-navigation__logo-link {
-    margin: 27px 0 36px 20px;
+  .main-navigation--opened,
+  .main-navigation--nojs {
+    margin-bottom: -116px;
   }
 
+  .main-navigation--closed .main-navigation__logo-link,
   .main-navigation--opened .main-navigation__logo-link {
-    margin: 27px 0 36px 20px;
+    margin: 18px 0 18px 40px;
   }
 
   .main-navigation--closed .main-navigation__button {
-    margin: 43px 20px 0 0;
+    margin: 12px 40px 0 0;
   }
 
   .main-navigation--opened .main-navigation__button {
-    margin: 44px 20px 0 0;
+    margin: 12px 40px 0 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-navigation {
-    position: relative;
-
     @include flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
-    width: 1200px;
+    width: 1152px;
     min-height: 108px;
     margin: 0 auto;
-    padding: 28px 119px 29px;
-    box-sizing: border-box;
-    z-index: 3;
+    padding: 28px 0 29px;
   }
 
   .main-navigation .site-wrapper {
-    width: 229px;
+    width: inherit;
   }
-
-  .main-navigation__logo-tablet {
-    display: none;
-  }
-
-  .main-navigation__logo-header {
-    width: 147px;
-    height: 40px;
-    margin-bottom: 7px;
-  }
-
-  .main-navigation__logo-mobile,
-  .main-navigation__logo-glass {
-    fill: $text-white;
-  }
-
-  .main-navigation__logo-desktop {
-    fill: $text-grey;
-  }
-
-  .main-navigation__logo-link:hover .main-navigation__logo-mobile,
-  .main-navigation__logo-link:hover .main-navigation__logo-glass {
-    fill: $text-grey;
-  }
-
-  .main-navigation__logo-link:hover:not([href]) .main-navigation__logo-mobile,
-  .main-navigation__logo-link:hover:not([href]) .main-navigation__logo-glass {
-    fill: $text-white;
-  }
-
-  .main-navigation__logo-link:active .main-navigation__logo-mobile,
-  .main-navigation__logo-link:active .main-navigation__logo-glass,
-  .main-navigation__logo-link:active .main-navigation__logo-desktop, {
-    fill: rgba($text-white, 0.3);
-  }
-
-  .main-navigation__logo-link:active:not([href]) .main-navigation__logo-mobile,
-  .main-navigation__logo-link:active:not([href]) .main-navigation__logo-glass {
-    fill: $text-white;
-  }
-
-  .main-navigation__logo-link:hover:not([href]) .main-navigation__logo-desktop,
-  .main-navigation__logo-link:active:not([href]) .main-navigation__logo-desktop {
-    fill: $text-grey;
-  }
-
-  /* stylelint-disable */
-  :-ms-fullscreen, :root .main-navigation__logo-link {
-    margin-top: 20px;
-    margin-bottom: 23px;
-  }
-  /* stylelint-enable */
 
   .main-navigation__logo-link {
-    margin: 27px 0 auto 10px;
+    margin: 27px 0 auto 2px;
+  }
+
+  .main-navigation__logo-link img {
+    width: 76px;
+    height: 100px;
   }
 
   .main-navigation__button {

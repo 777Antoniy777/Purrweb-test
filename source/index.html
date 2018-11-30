@@ -1,8 +1,9 @@
+<!--Переместить все стили offers и offers-slider-->
 <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>Purrweb: тестовое</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.min.css" rel="stylesheet">
@@ -27,16 +28,14 @@
         <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <div class="site-wrapper">
             <a class="main-navigation__logo-link">
-              <svg width="46.21" height="56.753">
-                <use xlink:href="#logo-header"/>
-              </svg>
+            <img src="img/svg/logo-header.svg" width="46.21" height="56.753" alt="Лого SALT">
             </a>
             <button class="main-navigation__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
           </div>
           <div class="main-navigation__wrapper">
             <ul class="main-navigation__list site-list">
               <li class="site-list__item site-list__item--active"><a class="site-list__link site-list__link--active">Home</a></li>
-              <li class="site-list__item"><a class="site-list__link" href="#">Products</a></li>
+              <li class="site-list__item"><a class="site-list__link " href="#">Products</a></li>
               <li class="site-list__item"><a class="site-list__link" href="#">Services</a></li>
               <li class="site-list__item"><a class="site-list__link" href="#">Resources</a></li>
               <li class="site-list__item"><a class="site-list__link" href="#">About</a></li>
@@ -46,8 +45,8 @@
         </nav>
       </div>
       <!--Предложения-->
-        <section class="offers">
-            <div class="site-wrapper">
+      <section class="offers">
+        <div class="site-wrapper">
           <h2 class="visually-hidden">Наши предложения</h2>
           <input type="radio" name="first-slider" id="first-slider-first-button" checked>
           <input type="radio" name="first-slider" id="first-slider-second-button">
@@ -55,29 +54,29 @@
           <div class="offers__wrapper offers-slider">
             <ul class="offers__list offers-slider__list">
               <li class="offers__item offers-slider__item">
-                <div>
+                <div class="offers-slider__inner-wrapper">
                   <h3 class="offers-slider__title">Device Authentication</h3>
                   <p class="offers-slider__description"><span>Salt</span> Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
                   <div class="offers-slider__link-wrapper">
-                    <a class="offers-slider__link" href="#">Get started</a>
+                    <a class="offers-slider__link" href="#" tabindex="-1">Get started</a>
                   </div>
                 </div>
               </li>
               <li class="offers__item offers-slider__item">
-                <div>
+                <div class="offers-slider__inner-wrapper">
                   <h3 class="offers-slider__title">Device Authentication</h3>
                   <p class="offers-slider__description"><span>Salt</span> Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
                   <div class="offers-slider__link-wrapper">
-                    <a class="offers-slider__link" href="#">Get started</a>
+                    <a class="offers-slider__link" href="#" tabindex="-1">Get started</a>
                   </div>
                 </div>
               </li>
               <li class="offers__item offers-slider__item">
-                <div>
+                <div class="offers-slider__inner-wrapper">
                   <h3 class="offers-slider__title">Device Authentication</h3>
                   <p class="offers-slider__description"><span>Salt</span> Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with <span>Salt</span>.</p>
                   <div class="offers-slider__link-wrapper">
-                    <a class="offers-slider__link" href="#">Get started</a>
+                    <a class="offers-slider__link" href="#" tabindex="-1">Get started</a>
                   </div>
                 </div>
               </li>
@@ -86,139 +85,145 @@
           <div class="offers__buttons">
             <label for="first-slider-first-button">
               <span class="visually-hidden">Первый слайд</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16.56" height="18.813"><path data-name="Polygon 1" d="M8.29 17.821L1 13.621V5.21l7.29-4.2 7.28 4.2v8.411z"/></svg>
+              <svg width="16.56" height="18.813">
+                <use xlink:href="#sprite-icon-button"/>
+              </svg>
             </label>
             <label for="first-slider-second-button">
               <span class="visually-hidden">Второй слайд</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16.56" height="18.813"><path data-name="Polygon 1" d="M8.29 17.821L1 13.621V5.21l7.29-4.2 7.28 4.2v8.411z"/></svg>
+              <svg width="16.56" height="18.813">
+                <use xlink:href="#sprite-icon-button"/>
+              </svg>
             </label>
             <label for="first-slider-third-button">
               <span class="visually-hidden">Третий слайд</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16.56" height="18.813"><path data-name="Polygon 1" d="M8.29 17.821L1 13.621V5.21l7.29-4.2 7.28 4.2v8.411z"/></svg>
+              <svg width="16.56" height="18.813">
+                <use xlink:href="#sprite-icon-button"/>
+              </svg>
             </label>
           </div>
           <div class="offers__add">
             <p class="offers__add-description">Find out more</p>
             <a class="offers__add-link" href="#">
               <span class="visually-hidden">Показать больше</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35"><path data-name="Polygon 1" d="M8.29 17.821L1 13.621V5.21l7.29-4.2 7.28 4.2v8.411z"/></svg>
+              <svg width="40" height="45">
+                <use xlink:href="#sprite-icon-button"/>
+              </svg>
             </a>
           </div>
-            </div>
-        </section>
+        </div>
+      </section>
     </header>
     <!--Основная часть гл.стр-->
     <main class="main">
       <!--Новости-->
       <div class="site-wrapper">
-      <section class="news">
-        <h2 class="visually-hidden">Новости нашей компании</h2>
-        <ul class="news__list">
-          <li class="news__item">
-            <span class="news__title">126,300</span>
-            <p class="news__description">Identity theft cases reported in Australia</p>
-          </li>
-          <li class="news__item">
+        <section class="news">
+          <h2 class="visually-hidden">Новости нашей компании</h2>
+          <ul class="news__list">
+            <li class="news__item">
+              <span class="news__title">126,300</span>
+              <p class="news__description">Identity theft cases reported in Australia</p>
+            </li>
+            <li class="news__item">
               <span class="news__title">$20.1bn</span>
               <p class="news__description">Online transactions per annum by Australians</p>
-          </li>
-          <li class="news__item">
+            </li>
+            <li class="news__item">
               <span class="news__title">45,511</span>
               <p class="news__description">Online fraud cases reported in Australia</p>
-          </li>
-        </ul>
-      </section>
-    </div>
+            </li>
+          </ul>
+        </section>
+      </div>
       <!--Особенности-->
       <div class="site-wrapper">
-      <section class="features">
-        <h2 class="features__title">What We Do</h2>
-        <ul class="features__list">
-          <li class="features__item">
-            <svg width="120" height="124">
-              <use xlink:href="#icon-features-1"/>
-            </svg>
-            <h3 class="features__item-title">Device authentication</h3>
-            <p class="features__item-description">Hardware-based device fingerprinting resilient to cloning, malware and device jailbreak/root. Hardware-level control over the displayed UI independent of the device operating system. Hardware-level data protection.</p>
-          </li>
-          <li class="features__item">
-            <svg width="120" height="124">
-              <use xlink:href="#icon-features-2"/>
-            </svg>
-            <h3 class="features__item-title">User authentication</h3>
-            <p class="features__item-description">Verify the identity of users for access control with contemporary biometric connected MFA security tokens.</p>
-          </li>
-          <li class="features__item">
-            <svg width="120" height="124">
-              <use xlink:href="#icon-features-3"/>
-            </svg>
-            <h3 class="features__item-title">Transaction authentication</h3>
-            <p class="features__item-description">High assurance out-of-band authentication of high impact transactions and instructions initiated through electronic service delivery channels. Audit trail of verification for non-repudiation. Fraud protection against man-in-the-middle and browser malware.</p>
-          </li>
-          <li class="features__item">
-            <svg width="120" height="124">
-              <use xlink:href="#icon-features-4"/>
-            </svg>
-            <h3 class="features__item-title">Contemporary authentication methods</h3>
-            <p class="features__item-description">Echidna authentication server to enable adaptive risk-based approach to security through a range of methods for different levels of authentication assurance from SMS OTPs, Challenge/Response, to more contemporary QR code signing and advanced connected mobile security tokens capable of transaction signatures with dynamic linking of the transaction context and addition of PIN, Fingerprint and other biometrics.</p>
-          </li>
-          <li class="features__item">
-            <svg width="120" height="80">
-              <use xlink:href="#icon-features-5"/>
-            </svg>
-            <h3 class="features__item-title">HSM solutions</h3>
-            <p class="features__item-description">Reseller of Thales nShield HSMs with professional services and subject matter expertise in HSMs, key ceremony procedures, and SEE code development.</p>
-          </li>
-          <li class="features__item">
-            <svg width="120" height="80">
-              <use xlink:href="#icon-features-6"/>
-            </svg>
-            <h3 class="features__item-title">Cloud & iot security</h3>
-            <p class="features__item-description">Secure the identity and access of users, devices and Internet of Things connecting into the cloud. Support cloud adoption and migration of applications and data into private and public clouds.</p>
-          </li>
-        </ul>
-      </section>
-    </div>
+        <section class="features">
+          <h2 class="features__title">What We Do</h2>
+          <ul class="features__list">
+            <li class="features__item">
+              <svg width="120" height="124">
+                <use xlink:href="#sprite-icon-features-1"/>
+              </svg>
+              <h3 class="features__item-title">Device authentication</h3>
+              <p class="features__item-description">Hardware-based device fingerprinting resilient to cloning, malware and device jailbreak/root. Hardware-level control over the displayed UI independent of the device operating system. Hardware-level data protection.</p>
+            </li>
+            <li class="features__item">
+              <svg width="120" height="124">
+                <use xlink:href="#sprite-icon-features-2"/>
+              </svg>
+              <h3 class="features__item-title">User authentication</h3>
+              <p class="features__item-description">Verify the identity of users for access control with contemporary biometric connected MFA security tokens.</p>
+            </li>
+            <li class="features__item">
+              <svg width="120" height="124">
+                <use xlink:href="#sprite-icon-features-3"/>
+              </svg>
+              <h3 class="features__item-title">Transaction authentication</h3>
+              <p class="features__item-description">High assurance out-of-band authentication of high impact transactions and instructions initiated through electronic service delivery channels. Audit trail of verification for non-repudiation. Fraud protection against man-in-the-middle and browser malware.</p>
+            </li>
+            <li class="features__item">
+              <svg width="120" height="124">
+                <use xlink:href="#sprite-icon-features-4"/>
+              </svg>
+              <h3 class="features__item-title">Contemporary authentication methods</h3>
+              <p class="features__item-description">Echidna authentication server to enable adaptive risk-based approach to security through a range of methods for different levels of authentication assurance from SMS OTPs, Challenge/Response, to more contemporary QR code signing and advanced connected mobile security tokens capable of transaction signatures with dynamic linking of the transaction context and addition of PIN, Fingerprint and other biometrics.</p>
+            </li>
+            <li class="features__item">
+              <svg width="120" height="80">
+                <use xlink:href="#sprite-icon-features-5"/>
+              </svg>
+              <h3 class="features__item-title">HSM solutions</h3>
+              <p class="features__item-description">Reseller of Thales nShield HSMs with professional services and subject matter expertise in HSMs, key ceremony procedures, and SEE code development.</p>
+            </li>
+            <li class="features__item">
+              <svg width="120" height="80">
+                <use xlink:href="#sprite-icon-features-6"/>
+              </svg>
+              <h3 class="features__item-title">Cloud & iot security</h3>
+              <p class="features__item-description">Secure the identity and access of users, devices and Internet of Things connecting into the cloud. Support cloud adoption and migration of applications and data into private and public clouds.</p>
+            </li>
+          </ul>
+        </section>
+      </div>
       <!--Продукт-->
       <div class="main__inner-wrapper">
-      
-      <section class="product">
+        <section class="product">
           <div class="site-wrapper">
-        <div class="product__wrapper">
-          <h3 class="product__title">Product Spotlight</h3>
-          <p class="product__description">Salt mSign Connected Token is a contemporary mobile security 2FA token for authentication of user identity and verification of transactions independent of the delivery channel that initiated the request.</p>
-          <div class="product__link-wrapper">
-            <a class="product__link" href="#">More info</a>
+            <div class="product__wrapper">
+              <h3 class="product__title">Product Spotlight</h3>
+              <p class="product__description">Salt mSign Connected Token is a contemporary mobile security 2FA token for authentication of user identity and verification of transactions independent of the delivery channel that initiated the request.</p>
+              <div class="product__link-wrapper">
+                <a class="product__link" href="#">More info</a>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="product__video-wrapper">
+            <div class="product__video-inner-wrapper">
+              <button class="product__video-button"><span class="visually-hidden">Нажмите, для воспроизведения</span></button>
+              <p class="product__video-description product__video-description--first">Feature video</p>
+              <p class="product__video-description product__video-description--second">Msign connected token</p>
+            </div>
+            <video class="product__video" poster="img/preview.jpg">
+              <source src="#" type="#">
+            </video>
           </div>
-        <div class="product__video-wrapper">
-        <div class="product__video-inner-wrapper">
-          <button class="product__video-button"><span class="visually-hidden">Нажмите, для воспроизведения</span></button>
-          <p class="product__video-description product__video-description--first">Feature video</p>
-          <p class="product__video-description product__video-description--second">Msign connected token</p>
-        </div>
-        <video class="product__video" width="90%" height="252" poster="img/preview.jpg">
-          <source src="#" type="#">
-        </video>
+        </section>
+        <!--Сотрудничество-->
+        <section class="cooperation">
+          <div class="site-wrapper">
+            <h2 class="visually-hidden">Сотрудничество с нашей компанией</h2>
+            <p class="cooperation__description">Ready to get started?</p>
+            <div class="cooperation__link-wrapper">
+              <a class="cooperation__link" href="#">Contact us</a>
+            </div>
+          </div>
+        </section>
       </div>
-      </section>
-    
-      <!--Сотрудничество-->
-      <section class="cooperation">
-        <div class="site-wrapper">
-        <h2 class="visually-hidden">Сотрудничество с нашей компанией</h2>
-        <p class="cooperation__description">Ready to get started?</p>
-        <div class="cooperation__link-wrapper">
-        <a class="cooperation__link" href="#">Contact us</a>
-        </div>
-        </div>
-      </section>
-    </div>
     </main>
     <!--Футер гл.стр-->
-      <footer class="main-footer">
-          <div class="site-wrapper">
+    <footer class="main-footer">
+      <div class="site-wrapper">
         <div class="main-footer__wrapper">
           <div class="main-footer__social social">
             <h2 class="visually-hidden">Мы в Twitter!</h2>
@@ -226,7 +231,7 @@
               <a class="social__link" href="#">
                 <span class="visually-hidden">Twitter @saltgroup</span>
                 <svg width="17" height="14">
-                  <use xlink:href="#icon-twitter"/>
+                  <use xlink:href="#sprite-icon-twitter"/>
                 </svg>
               </a>
               <p class="social__description">
@@ -243,7 +248,7 @@
               </li>
               <li class="social__item">
                 <p class="social__item-description">Tailored Trends bring you closer
-                  <a class="social__item-link" href="#">http://testing123.com.au</a>
+                  <a class="social__item-link" href="#">http://-testing123.com.au</a>
                 </p>
                 <p class="social__item-description social__item-description--time">12 June 2016</p>
               </li>
@@ -258,7 +263,9 @@
           <div class="main-footer__contacts contacts">
             <h2 class="visually-hidden">Контакты</h2>
             <ul class="contacts__list">
-              <li class="contacts__item"><h3 class="contacts__title"><a href="#">Navigation</a></h3></li>
+              <li class="contacts__item">
+                <h3 class="contacts__title">Navigation</h3>
+              </li>
               <li class="contacts__item"><a href="#">Home</a></li>
               <li class="contacts__item"><a href="#">Products</a></li>
               <li class="contacts__item"><a href="#">Services</a></li>
@@ -267,31 +274,35 @@
               <li class="contacts__item"><a href="#">Contact us</a></li>
             </ul>
             <ul class="contacts__list">
-              <li class="contacts__item"><h3 class="contacts__title"><a href="#">Links</a></h3></li>
+              <li class="contacts__item">
+                <h3 class="contacts__title">Links</h3>
+              </li>
               <li class="contacts__item"><a href="#">Disclaimer</a></li>
               <li class="contacts__item"><a href="#">Legal</a></li>
               <li class="contacts__item"><a href="#">Environment policy</a></li>
               <li class="contacts__item"><a href="#">Privacy</a></li>
             </ul>
-            <ul class="contacts__list">
-              <li class="contacts__item"><h3 class="contacts__title"><a href="#">Contact sales</a></h3></li>
-              <li class="contacts__item">Phone:<a href="tel:+61396144416">+61 3 9614 4416</a></li>
-              <li class="contacts__item">Email:<a href="#">sales@saltgroup.com.au</a></li>
+            <ul class="contacts__list contacts__list--mobile">
+              <li class="contacts__item">
+                <h3 class="contacts__title">Contact sales</h3>
+              </li>
+              <li class="contacts__item"><span>Phone:</span><a class="contacts__link" href="tel:+61396144416">+61 3 9614 4416</a></li>
+              <li class="contacts__item"><span>Email:</span><a class="contacts__link" href="#">sales@saltgroup.com.au</a></li>
             </ul>
           </div>
           <div class="main-footer__wrapper-logo">
             <a class="main-footer__logo-link">
-            <img src="#" width="75" height="86" alt="Логотип Salt">
+            <img src="img/svg/logo-footer.svg" width="75" height="86" alt="Логотип Salt">
             </a>
           </div>
         </div>
-          </div>
-          <div class="main-footer__copyright-wrapper">
-              <div class="site-wrapper">
-            <p class="main-footer__copyright-description">© 2017 salt group<span>all rights reserved. website by dorne creative.</span></p>
-            </div>
-          </div>
-      </footer>
+      </div>
+      <div class="main-footer__copyright-wrapper">
+        <div class="site-wrapper">
+          <p class="main-footer__copyright-description">© 2017 <a href="#">salt group</a><span> all rights reserved. website by <a href="#">dorne creative</a>.</span></p>
+        </div>
+      </div>
+    </footer>
     <div style="display: none;">
       <include src="build/img/svg-sprite.svg"></include>
     </div>

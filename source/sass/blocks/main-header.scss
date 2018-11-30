@@ -13,17 +13,8 @@
 
 @media (min-width: $desktop-width) {
   .main-header {
-    position: relative;
-    min-height: 110px;
-    z-index: 2;
-  }
-
-  .main-header__inner-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    background-image: url("../../img/background.png");
     background-color: $background-color;
-    z-index: 2;
+    background-position: 0 0;
   }
 }

@@ -55,7 +55,7 @@ gulp.task("webp", function() {
 });
 
 gulp.task("svgsprite", function() {
-  return gulp.src("build/img/svg/*.svg")
+  return gulp.src("build/img/svg/sprite-*.svg")
     .pipe(svgsprite({
       inlineSvg: true
     }))
@@ -64,7 +64,7 @@ gulp.task("svgsprite", function() {
 });
 
 gulp.task("svgdel", function() {
-  return del("build/img/svg");
+  return del("build/img/svg/sprite-*.svg");
 });
 
 gulp.task("html", function() {

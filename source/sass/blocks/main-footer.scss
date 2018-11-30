@@ -6,3 +6,77 @@
   color: $text-white;
   padding-top: 50px;
 }
+
+.main-footer__social {
+  margin: 0 auto 15px;
+}
+
+.main-footer__contacts {
+  margin: 0 auto 15px;
+}
+
+.main-footer__wrapper-logo {
+  @include flex;
+  justify-content: center;
+}
+
+.main-footer__copyright-wrapper {
+  background-color: $footerdown-color;
+  padding: 5px 0;
+  margin-top: 10px;
+}
+
+.main-footer__copyright-description {
+  font-size: $body-font-size - 5px;
+  line-height: $body-line-height - 10px;
+  font-weight: $font-normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: #9b9b9b;
+  margin: 0;
+}
+
+.main-footer__copyright-description span {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+
+  &::before {
+    @include pseudo;
+    top: 0;
+    left: -13px;
+    background-image: url("../img/svg/icon-button.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 11px 11px;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+.main-footer__copyright-description a {
+  @include link(none, #9b9b9b);
+
+  &:hover {
+    color: $button-color;
+  }
+
+  &:active {
+    color: $button-color;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__wrapper-logo {
+    justify-content: flex-end;
+    width: 580px;
+    margin: 0 auto;
+  }
+
+  .main-footer__copyright-wrapper .site-wrapper {
+    width: 580px;
+    margin: 0 auto;
+  }
+}
