@@ -19,10 +19,9 @@
     @include pseudo;
     bottom: 0;
     right: 0;
-    width: 50%;
+    width: 50.1%;
     height: 115px;
-    background-image: 
-      linear-gradient(to left top, #fff 50%, transparent 50%);
+    background-image: linear-gradient(to left top, #fff 50%, transparent 50%);
   }
 }
 
@@ -161,7 +160,7 @@
     height: 12px;
     border: 4px solid $button-color;
     background-color: transparent;
-    clip: rect(4px auto auto 4px);
+    clip: rect(5px auto auto 5px);
     transform: rotate(45deg);
   }
 
@@ -223,7 +222,6 @@
   fill: $button-color;
 }
 
-
 .offers input[type="radio"]:nth-of-type(1):active ~ .offers__buttons label[for="first-slider-first-button"],
 .offers input[type="radio"]:nth-of-type(2):active ~ .offers__buttons label[for="first-slider-second-button"],
 .offers input[type="radio"]:nth-of-type(3):active ~ .offers__buttons label[for="first-slider-third-button"] {
@@ -279,26 +277,32 @@
     background-color: transparent;
     color: $text-white;
     padding: 0;
-  }
 
-  .offers-slider {
-    overflow: hidden;
+    &::before {
+      bottom: -86px;
+      height: 248px;
+    }
+  
+    &::after {
+      bottom: -86px;
+      height: 248px;
+    }
   }
   
   .offers-slider__list {
-  //  position: absolute;
-    transition: transform 1s ease;
+    width: 100%;
   }
 
   .offers-slider__item {
+    display: none;
     position: relative;
-    margin: 37px 8px;
+    margin: 37px 8px 37px 40px;
 
     &::after {
       @include pseudo;
       @include background;
-      top: 0;
-      right: 0;
+      top: 128px;
+      right: -304px;
       background-image: url("../img/svg/icon-twitter.svg");
       width: 149px;
       height: 121px;
@@ -329,5 +333,66 @@
     width: 143px;
     min-height: 44px;
     padding: 5px 16px 5px 14px;
+  }
+
+  .offers__buttons {
+    bottom: 58.6%;
+    right: -671px;
+    transform: rotate(90deg);
+  }
+
+  .offers__buttons label {
+    margin: 0 10px 0 9px;
+    transform: rotate(30deg) scale(0.88);
+  }
+
+  .offers__add-description {
+    font-size: $body-font-size;
+    line-height: $body-line-height - 4px;
+    margin-top: 18px;
+  }
+
+  .offers__add-link {
+    &::before {
+      top: 18px;
+      left: 2px;
+      width: 24px;
+      height: 25px;
+      border: 5px solid $button-color;
+      clip: rect(15px auto auto 15px);
+      transform: rotate(52deg) skewY(-14deg);
+    }
+  }
+  
+  .offers__add-link svg {
+    top: 25px;
+    left: 61%;
+    height: 19px;
+    transform: scale(4) translateX(-19%);
+  }
+
+  //стили для управления первым слайдером на десктопе
+  @keyframes opacity {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+  }
+  
+  .offers input[type="radio"]:nth-of-type(1):checked ~ .offers__buttons label[for="first-slider-first-button"],
+  .offers input[type="radio"]:nth-of-type(2):checked ~ .offers__buttons label[for="first-slider-second-button"],
+  .offers input[type="radio"]:nth-of-type(3):checked ~ .offers__buttons label[for="first-slider-third-button"] {
+    transform: rotate(30deg) scale(1.2);
+  }
+
+  .offers input[type="radio"]:nth-of-type(1):checked ~ .offers__wrapper .offers__list,
+  .offers input[type="radio"]:nth-of-type(2):checked ~ .offers__wrapper .offers__list,
+  .offers input[type="radio"]:nth-of-type(3):checked ~ .offers__wrapper .offers__list {
+    transform: translateX(0);
+  }
+  
+  .offers input[type="radio"]:nth-of-type(1):checked ~ .offers-slider .offers-slider__item:nth-child(1),
+  .offers input[type="radio"]:nth-of-type(2):checked ~ .offers-slider .offers-slider__item:nth-child(2),
+  .offers input[type="radio"]:nth-of-type(3):checked ~ .offers-slider .offers-slider__item:nth-child(3) {
+    display: block;
+    animation: opacity 1.5s;
   }
 }

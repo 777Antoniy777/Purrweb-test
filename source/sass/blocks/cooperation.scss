@@ -59,3 +59,46 @@
     text-align: left;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .cooperation {
+    position: relative;
+    background-image: url("../img/overlay.jpg");
+    background-position: 0 -290px;
+    background-repeat: no-repeat;
+    background-size: 100% 909px;
+    width: 100%;
+    min-height: 218px;
+    margin-top: 121px;
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($background-color, 0.8);
+    }
+  }
+
+  .cooperation .site-wrapper {
+    width: 1152px;
+    justify-content: space-between;
+  }
+
+  .cooperation__description {
+    font-size: $body-font-size + 25px;
+    line-height: $body-line-height + 20px;
+    min-width: 570px;
+    text-align: left;
+    margin-top: 90px;
+  }
+  
+  .cooperation__link {
+    font-size: $body-font-size - 1px;
+    line-height: $body-line-height - 6px;
+    width: 143px;
+    min-height: 44px;
+    padding: 5px 16px 5px 14px;
+  }
+}

@@ -80,3 +80,22 @@
     margin: 0 auto;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-footer {
+    padding-top: 58px;
+  }
+
+  .main-footer__wrapper {
+    width: 1152px;
+    margin: 0 auto;
+  }
+
+  .main-footer__social {
+    margin: 0;
+  }
+  
+  .main-footer__contacts {
+    margin: 0;
+  }
+} 

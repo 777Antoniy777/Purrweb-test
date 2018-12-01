@@ -26,3 +26,36 @@
   color: $background-color;
   margin: 5px 0 30px;
 }
+
+@media (min-width: $desktop-width) {
+  .news {
+    margin-top: 146px;
+  }
+
+  .news__list {
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 138px;
+  }
+
+  .news__item {
+    @include flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 250px;
+  }
+  
+  .news__title {
+    font-size: $body-font-size + 45px;
+    line-height: $body-line-height + 22px;
+    margin-bottom: 22px;
+    word-break: break-all;
+  }
+  
+  .news__description {
+    font-size: $body-font-size;
+    line-height: $body-line-height - 1px;
+    margin-top: auto;
+  }
+}

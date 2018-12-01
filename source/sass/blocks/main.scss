@@ -16,3 +16,13 @@
     background-color: rgba($background-color, 0.8);
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main__inner-wrapper {
+    background-image: none;
+
+    &::before {
+      content: none;
+    }
+  }
+}
