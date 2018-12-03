@@ -86,7 +86,7 @@
 /* stylelint-disable */
 :-ms-fullscreen, :root .product__video-inner-wrapper {
   top: 60px;
-  width: 205px;
+  min-width: 300px;
 }
  /* stylelint-enable */
 
@@ -147,7 +147,7 @@
   /* stylelint-disable */
   :-ms-fullscreen, :root .product__video-inner-wrapper {
     top: 120px;
-    width: 370px;
+    min-width: 570px;
   }
  /* stylelint-enable */
 
@@ -214,7 +214,7 @@
    /* stylelint-enable */
 
   .product__video-inner-wrapper {
-    width: 504px;
+    min-width: 504px;
     top: 168px;
   }
 
