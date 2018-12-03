@@ -24,7 +24,7 @@
     background-color: $button-color;
   }
 
-  &::after  {
+  &::after {
     @include pseudo;
     top: -3px;
     right: -25px;
