@@ -70,12 +70,12 @@
     &:hover:not([href]) {
       color: $text-white;
     }
-  
+
     &:active {
       color: $button-color;
       opacity: 0.3;
     }
-  
+
     &:active:not([href]) {
       opacity: 1;
     }

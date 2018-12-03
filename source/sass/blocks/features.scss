@@ -18,7 +18,7 @@
   &::before {
     @include pseudo;
     top: -11px;
-    right: -22px;
+    right: -16px;
     width: 21px;
     height: 6px;
     background-color: $button-color;
@@ -27,7 +27,7 @@
   &::after  {
     @include pseudo;
     top: -3px;
-    right: -31px;
+    right: -25px;
     width: 21px;
     height: 6px;
     background-color: $button-color;
@@ -95,14 +95,14 @@
     line-height: $body-line-height + 40px;
     margin-right: 121px;
     margin-bottom: 68px;
-  
+
     &::before {
       top: -31px;
       right: -48px;
       width: 46px;
       height: 12px;
     }
-  
+
     &::after {
       top: -14px;
       right: -65px;
