@@ -47,10 +47,11 @@
     justify-content: flex-start;
     font-size: $body-font-size + 9px;
     line-height: $body-line-height + 2px;
-    min-width: inherit;
+    min-width: 220px;
     min-height: 5px;
     background-color: inherit;
     margin-left: 20px;
+    word-break: break-all;
 
     &:hover {
       color: $button-color;
@@ -158,41 +159,34 @@
   
   .social__description {
     width: 240px;
+    margin: 0 5px 3px 0;
   
     &--twit {
-      font-size: $body-font-size + 9px;
-      line-height: $body-line-height + 8px;
+      font-size: $body-font-size - 1px;
+      line-height: $body-line-height - 6px;
+      margin-left: 12px;
     }
   }
   
-  .social__item-description {
-    font-size: $body-font-size - 1px;
-    line-height: $body-line-height - 2px;
-    color: #999999;
-    margin-bottom: 0;
-  
-    &--time {
-      font-size: $body-font-size - 3px;
-      line-height: $body-line-height - 2px;
-      color: #555555;
-      margin-top: 0;
+  .social__link {
+    min-width: 60px;
+
+    &::before {
+      width: 35px;
+      height: 35px;
+    }
+
+    &--twit {
+      margin-top: 8px;
+      margin-left: 12px;
     }
   }
-  
-  .social__item-link {
-    @include link(none, $background-color);
-    font-size: $body-font-size - 1px;
-    line-height: $body-line-height - 2px;
-    word-break: break-all;
-  
-    &:hover {
-      color: $button-color;
-    }
-  
-    &:active {
-      color: $button-color;
-      opacity: 0.6;
-    }
+
+  .social__list {
+    padding-bottom: 4px;
   }
-  
+
+  .social__item {
+    margin-bottom: 19px;
+  }
 }

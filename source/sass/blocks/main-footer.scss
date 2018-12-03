@@ -83,19 +83,53 @@
 
 @media (min-width: $desktop-width) {
   .main-footer {
-    padding-top: 58px;
+    padding-top: 40px;
   }
 
   .main-footer__wrapper {
-    width: 1152px;
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1160px;
     margin: 0 auto;
   }
 
   .main-footer__social {
     margin: 0;
+    margin-top: 17px;
   }
   
   .main-footer__contacts {
     margin: 0;
+  }
+
+  .main-footer__wrapper-logo {
+    width: 580px;
+    margin: -56px auto 0;
+  }
+
+  .main-footer__logo-link {
+    position: relative;
+    top: -10px;
+    right: -473px;
+  }
+
+  .main-footer__copyright-wrapper .site-wrapper {
+    width: 1152px;
+    min-height: 16px;
+  }
+
+  .main-footer__copyright-description {
+    font-size: $body-font-size - 5px;
+    line-height: $body-line-height - 10px;
+    letter-spacing: 0.7px;
+    margin: 0;
+    margin-top: 5px;
+  }
+  
+  .main-footer__copyright-description span {
+    &::before {
+      left: -14px;
+    }
   }
 } 

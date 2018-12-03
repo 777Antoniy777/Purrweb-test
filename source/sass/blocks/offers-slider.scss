@@ -1,0 +1,126 @@
+.offers-slider {
+  overflow: hidden;
+}
+
+.offers-slider__list {
+  @include list;
+  @include flex;
+  width: 300%;
+  transition: transform 1s ease;
+}
+
+.offers-slider__item {
+  width: 320px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.offers-slider__inner-wrapper {
+  @include flex;
+  flex-wrap: wrap;
+}
+
+.offers-slider__title {
+  font-size: $body-font-size + 21px;
+  line-height: $body-line-height + 16px;
+  font-weight: $font-bold;
+  margin-bottom: 20px;
+}
+
+.offers-slider__description {
+  font-size: $body-font-size - 2px;
+  line-height: $body-line-height + 4px;
+  text-align: left;
+  margin-top: 0;
+}
+
+.offers-slider__description span {
+  text-transform: uppercase;
+}
+
+.offers-slider__link-wrapper {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.offers-slider__link {
+  @include link;
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $body-font-size - 3px;
+  line-height: $body-line-height - 8px;
+  font-weight: $font-bold;
+  width: 130px;
+  min-height: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $button-color;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin-right: auto;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-active;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .offers-slider__item {
+    width: 660px;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offers-slider__list {
+    width: 100%;
+  }
+
+  .offers-slider__item {
+    display: none;
+    position: relative;
+    margin: 37px 8px 37px 40px;
+
+    &::after {
+      @include pseudo;
+      @include background;
+      top: 128px;
+      right: -304px;
+      background-image: url("../img/svg/icon-twitter.svg");
+      width: 149px;
+      height: 121px;
+    }
+  }
+
+  .offers-slider__title {
+    font-size: $body-font-size + 39px;
+    line-height: $body-line-height + 36px;
+    margin-bottom: 10px;
+  }
+  
+  .offers-slider__description {
+    font-size: $body-font-size + 1px;
+    line-height: $body-line-height + 8px;
+    width: 464px;
+    margin-left: 2px;
+    margin-right: 20px;
+  }
+
+  .offers-slider__link-wrapper {
+    margin: 28px 0 80px 2px;
+  }
+  
+  .offers-slider__link {
+    font-size: $body-font-size - 1px;
+    line-height: $body-line-height - 6px;
+    width: 143px;
+    
+    min-height: 10px;
+    padding: 20px 16px 18px 14px;
+  }
+}

@@ -28,12 +28,12 @@
   line-height: $body-line-height - 8px;
   font-weight: $font-bold;
   width: 130px;
-  min-height: 30px;
+  min-height: 10px;
   text-transform: uppercase;
   text-align: center;
   background-color: $button-color;
   border-radius: 5px;
-  padding: 5px 15px;
+  padding: 15px 15px;
 
   &:hover {
     background-color: $button-hover;
@@ -58,6 +58,12 @@
     width: 300px;
     text-align: left;
   }
+
+  /* stylelint-disable */
+  :-ms-fullscreen, :root .cooperation__description {
+    margin-right: 120px;
+  }
+  /* stylelint-enable */
 }
 
 @media (min-width: $desktop-width) {
@@ -70,6 +76,12 @@
     width: 100%;
     min-height: 218px;
     margin-top: 121px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/overlay@2x.jpg");
+      background-size: 1617px 909px;
+      background-position: -2px -290px;
+    }
 
     &::before {
       @include pseudo;
@@ -93,12 +105,18 @@
     text-align: left;
     margin-top: 90px;
   }
+
+  /* stylelint-disable */
+  :-ms-fullscreen, :root .cooperation__description {
+    margin-right: 400px;
+  }
+  /* stylelint-enable */
   
   .cooperation__link {
     font-size: $body-font-size - 1px;
     line-height: $body-line-height - 6px;
     width: 143px;
-    min-height: 44px;
-    padding: 5px 16px 5px 14px;
+    min-height: 10px;
+    padding: 20px 16px 18px 14px;
   }
 }

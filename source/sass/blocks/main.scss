@@ -7,6 +7,12 @@
   width: 100%;
   min-height: 140px;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/overlay@2x.jpg");
+    background-size: 1617px 909px;
+    background-position: -97px 0;
+  }
+
   &::before {
     @include pseudo;
     top: 0;
