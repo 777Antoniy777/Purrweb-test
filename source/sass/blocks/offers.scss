@@ -25,7 +25,7 @@
     @include pseudo;
     bottom: 0;
     right: 0;
-    width: 50.1%;
+    width: 50%;
     height: 115px;
     background-image: linear-gradient(to left top, #ffffff 50%, transparent 50%);
   }
@@ -257,7 +257,7 @@
 
   //стили для управления первым слайдером на десктопе
   @keyframes opacity {
-    from {opacity: 0;} 
+    from {opacity: 0;}
     to   {opacity: 1;}
   }
 

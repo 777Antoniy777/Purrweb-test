@@ -27,6 +27,19 @@
   margin: 5px 0 30px;
 }
 
+@media (min-width: $tablet-width) {
+  .news__list {
+    @include flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .news__item {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .news {
     margin-top: 146px;

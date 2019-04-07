@@ -76,18 +76,18 @@ body {
 }
 
 .site-wrapper {
-  width: $mobile-width;
+  width: 85%;
   margin: 0 auto;
   padding: 0;
 }
 
 @media (min-width: $tablet-width) {
-  body {
-    min-width: $tablet-width;
-  }
+  // body {
+  //   min-width: $tablet-width;
+  // }
 
   .site-wrapper {
-    width: $tablet-width;
+    width: 85%;
   }
 }
 
@@ -97,6 +97,7 @@ body {
   }
 
   .site-wrapper {
-    width: 1152px;
+    // width: 1152px;
+    width: 85%;
   }
 }

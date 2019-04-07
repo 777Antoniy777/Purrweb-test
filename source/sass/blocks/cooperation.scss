@@ -2,8 +2,9 @@
   @include flex;
   position: relative;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 15px;
   z-index: 2;
 }
 
@@ -12,11 +13,13 @@
   line-height: $body-line-height + 10px;
   font-weight: $font-bold;
   text-align: center;
+  width: 100%;
+  margin: 0 20px 15px 20px;
   color: $text-white;
 }
 
 .cooperation__link-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .cooperation__link {
@@ -50,12 +53,11 @@
   }
 
   .cooperation .site-wrapper {
-    width: 580px;
     justify-content: space-between;
   }
 
   .cooperation__description {
-    width: 300px;
+    width: 60%;
     text-align: left;
   }
 

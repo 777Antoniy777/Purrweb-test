@@ -58,7 +58,6 @@
 
 @media (min-width: $tablet-width) {
   .features {
-    width: 580px;
     margin: 50px auto 50px;
   }
 
@@ -66,11 +65,12 @@
     @include flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 580px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .features__item {
-    width: 260px;
+    width: 250px;
   }
 
   .features__item-title {
