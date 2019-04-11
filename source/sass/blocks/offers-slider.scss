@@ -76,24 +76,13 @@
 }
 
 @media (min-width: $desktop-width) {
-  .offers-slider__list {
-    width: 100%;
+  .offers-slider__item {
+    margin: 37px 0 37px 4%;
+    padding: 0 20px;
   }
 
-  .offers-slider__item {
-    display: none;
-    position: relative;
-    margin: 37px 8px 37px 40px;
-
-    &::after {
-      @include pseudo;
-      @include background;
-      top: 128px;
-      right: -304px;
-      background-image: url("../img/svg/icon-twitter.svg");
-      width: 149px;
-      height: 121px;
-    }
+  .offers-slider__inner-wrapper {
+    flex-direction: column;
   }
 
   .offers-slider__title {
@@ -103,11 +92,22 @@
   }
 
   .offers-slider__description {
+    position: relative;
     font-size: $body-font-size + 1px;
     line-height: $body-line-height + 8px;
-    width: 464px;
+    width: 40%;
     margin-left: 2px;
     margin-right: 20px;
+
+    &::after {
+      @include pseudo;
+      @include background;
+      top: 7%;
+      right: -99.5%;
+      background-image: url("../img/svg/icon-twitter.svg");
+      width: 149px;
+      height: 121px;
+    }
   }
 
   .offers-slider__link-wrapper {
@@ -118,7 +118,6 @@
     font-size: $body-font-size - 1px;
     line-height: $body-line-height - 6px;
     width: 143px;
-    min-height: 10px;
     padding: 20px 16px 18px 14px;
   }
 }

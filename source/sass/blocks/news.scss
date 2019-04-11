@@ -46,10 +46,7 @@
   }
 
   .news__list {
-    @include flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 138px;
+    margin: 0 15.2%;
   }
 
   .news__item {
@@ -67,7 +64,6 @@
   }
 
   .news__description {
-    font-size: $body-font-size;
     line-height: $body-line-height - 1px;
     margin-top: auto;
   }

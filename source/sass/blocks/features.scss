@@ -86,14 +86,14 @@
 
 @media (min-width: $desktop-width) {
   .features {
-    width: 1152px;
+    width: 100%;
     margin: 249px auto 50px;
   }
 
   .features__title {
     font-size: $body-font-size + 45px;
     line-height: $body-line-height + 40px;
-    margin-right: 121px;
+    margin-right: 16.5%;
     margin-bottom: 68px;
 
     &::before {
@@ -112,23 +112,24 @@
   }
 
   .features__list {
-    @include flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 916px;
-    margin: 0 127px;
+    justify-content: center;
+    width: 70%;
+    margin: 0 15.7%;
   }
 
+  /* stylelint-disable */
+  :-ms-fullscreen, :root .features__list {
+    width: 67%;
+  }
+  /* stylelint-enable */
+
   .features__item {
-    width: 285px;
+    max-width: 285px;
     min-height: 370px;
     margin-bottom: 20px;
-    margin-right: 30px;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
     flex-grow: 1;
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
   }
 
   .features__item-image {
@@ -185,7 +186,5 @@
   .features__item-description {
     font-size: $body-font-size;
     line-height: $body-line-height;
-    text-align: left;
-    margin-top: 0;
   }
 }

@@ -79,13 +79,16 @@
   margin: 10px auto;
 }
 
-.offers__add-link {
+.offers__add-button {
   @include flex;
   position: relative;
   width: 41px;
   height: 45px;
+  border: none;
   margin: 0 auto;
+  background-color: transparent;
   z-index: 1;
+  cursor: pointer;
 
   &::before {
     @include pseudo;
@@ -108,9 +111,9 @@
   }
 }
 
-.offers__add-link svg {
+.offers__add-button svg {
   position: relative;
-  top: 2px;
+  top: -5px;
   left: 50%;
   width: 17px;
   height: 18px;
@@ -129,6 +132,12 @@
     stroke: $button-active;
   }
 }
+
+/* stylelint-disable */
+_:-ms-fullscreen, :root .offers__add-button svg {
+  top: 3px;
+}
+/* stylelint-enable */
 
 //стили для управления первым слайдером на мобильном
 .offers input[type="radio"]:nth-of-type(1):checked ~ .offers__buttons label[for="first-slider-first-button"],
@@ -209,19 +218,19 @@
     padding: 0;
 
     &::before {
-      bottom: -86px;
+      bottom: -50px;
       height: 248px;
     }
 
     &::after {
-      bottom: -86px;
+      bottom: -50px;
       height: 248px;
     }
   }
 
   .offers__buttons {
-    bottom: 58.6%;
-    right: -671px;
+    bottom: 61.1%;
+    right: -42%;
     transform: rotate(90deg);
   }
 
@@ -234,12 +243,16 @@
     font-size: $body-font-size;
     line-height: $body-line-height - 4px;
     margin-top: 18px;
+    margin-bottom: 21px;
   }
 
-  .offers__add-link {
+  .offers__add-button {
+    width: 70px;
+    height: 70px;
+
     &::before {
-      top: 18px;
-      left: 2px;
+      top: 6px;
+      left: 17px;
       width: 24px;
       height: 25px;
       border: 5px solid $button-color;
@@ -248,18 +261,19 @@
     }
   }
 
-  .offers__add-link svg {
-    top: 25px;
-    left: 61%;
+  .offers__add-button svg {
+    top: 0;
+    left: 37%;
     height: 19px;
-    transform: scale(4) translateX(-19%);
+    margin-top: 0;
+    transform: scale(3.9);
   }
 
-  //стили для управления первым слайдером на десктопе
-  @keyframes opacity {
-    from {opacity: 0;}
-    to   {opacity: 1;}
+  /* stylelint-disable */
+  _:-ms-fullscreen, :root .offers__add-button svg {
+    top: 23px;
   }
+  /* stylelint-enable */
 
   .offers input[type="radio"]:nth-of-type(1):checked ~ .offers__buttons label[for="first-slider-first-button"],
   .offers input[type="radio"]:nth-of-type(2):checked ~ .offers__buttons label[for="first-slider-second-button"],
@@ -267,16 +281,16 @@
     transform: rotate(30deg) scale(1.2);
   }
 
-  .offers input[type="radio"]:nth-of-type(1):checked ~ .offers__wrapper .offers__list,
-  .offers input[type="radio"]:nth-of-type(2):checked ~ .offers__wrapper .offers__list,
-  .offers input[type="radio"]:nth-of-type(3):checked ~ .offers__wrapper .offers__list {
+  // стили для управления первым слайдером на десктопе
+  .offers input[type="radio"]:nth-of-type(1):checked ~ .offers__wrapper .offers__list {
     transform: translateX(0);
   }
 
-  .offers input[type="radio"]:nth-of-type(1):checked ~ .offers-slider .offers-slider__item:nth-child(1),
-  .offers input[type="radio"]:nth-of-type(2):checked ~ .offers-slider .offers-slider__item:nth-child(2),
-  .offers input[type="radio"]:nth-of-type(3):checked ~ .offers-slider .offers-slider__item:nth-child(3) {
-    display: block;
-    animation: opacity 1.5s;
+  .offers input[type="radio"]:nth-of-type(2):checked ~ .offers__wrapper .offers__list {
+    transform: translateX(-660px);
+  }
+
+  .offers input[type="radio"]:nth-of-type(3):checked ~ .offers__wrapper .offers__list {
+    transform: translateX(-1320px);
   }
 }

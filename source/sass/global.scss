@@ -80,24 +80,3 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-
-@media (min-width: $tablet-width) {
-  // body {
-  //   min-width: $tablet-width;
-  // }
-
-  .site-wrapper {
-    width: 85%;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  body {
-    min-width: 1600px;
-  }
-
-  .site-wrapper {
-    // width: 1152px;
-    width: 85%;
-  }
-}

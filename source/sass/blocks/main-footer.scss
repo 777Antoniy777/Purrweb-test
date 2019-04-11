@@ -89,8 +89,8 @@
   .main-footer__wrapper {
     @include flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 1160px;
+    justify-content: flex-start;
+    width: 85%;
     margin: 0 auto;
   }
 
@@ -104,26 +104,23 @@
   }
 
   .main-footer__wrapper-logo {
-    width: 580px;
+    width: 51%;
     margin: -56px auto 0;
   }
 
   .main-footer__logo-link {
     position: relative;
     top: -10px;
-    right: -473px;
+    right: -80%;
   }
 
   .main-footer__copyright-wrapper .site-wrapper {
-    width: 1152px;
+    width: 85%;
     min-height: 16px;
   }
 
   .main-footer__copyright-description {
-    font-size: $body-font-size - 5px;
-    line-height: $body-line-height - 10px;
     letter-spacing: 0.7px;
-    margin: 0;
     margin-top: 5px;
   }
 
