@@ -1,0 +1,21 @@
+.video-js {
+  font-size: 50px;
+  background-color: red;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+  font-size: 3em;
+
+  $big-play-width: 3em;
+  /* 1.5em = 45px default */
+  $big-play-height: 1.5em;
+
+  line-height: $big-play-height;
+  height: $big-play-height;
+  width: $big-play-width;
+
+  /* 0.06666em = 2px default */
+  border: 0.06666em solid yellow;
+  /* 0.3em = 9px default */
+  border-radius: 0.3em;
+}

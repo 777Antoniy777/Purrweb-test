@@ -12,6 +12,8 @@
     <link href="/fonts/Raleway-ExtraBold.woff2" as="font" rel="preload">
     <link href="/fonts/Raleway-SemiBold.woff2" as="font" rel="preload">
     <link href="/fonts/MyriadPro-Regular.woff2" as="font" rel="preload">
+
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
     <script>
       // Picture element HTML5 shiv
       document.createElement("picture");
@@ -198,14 +200,28 @@
           </div>
           <div class="product__video-wrapper">
             <div class="product__video-inner-wrapper">
-              <button class="product__video-button"><span class="visually-hidden">Нажмите, для воспроизведения</span></button>
+              <!-- <button class="product__video-button"><span class="visually-hidden">Нажмите, для воспроизведения</span></button>
               <p class="product__video-description product__video-description--first">Feature video</p>
-              <p class="product__video-description product__video-description--second">Msign connected token</p>
+              <p class="product__video-description product__video-description--second">Msign connected token</p> -->
             </div>
-            <video class="product__video" poster="img/preview.jpg">
+            <!-- <video class="product__video" poster="img/preview.jpg">
               <source src="#" type="video/mp4">
+            </video> -->
+            <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px"
+              controls preload="none" poster='http://video-js.zencoder.com/oceans-clip.jpg'
+              data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+              <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
+              <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
             </video>
           </div>
+
+          <!-- <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px"
+          controls preload="none" poster='http://video-js.zencoder.com/oceans-clip.jpg'
+          data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+          <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
+          <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
+          </video> -->
+
         </section>
         <!--Сотрудничество-->
         <section class="cooperation">
@@ -304,6 +320,11 @@
     <div style="display: none;">
       <include src="build/img/svg-sprite.svg"></include>
     </div>
+    <script src="js/smoothpolyfill.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/scroll.js"></script>
+
+    <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
   </body>
 </html>
