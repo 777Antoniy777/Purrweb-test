@@ -131,8 +131,10 @@
   }
 
   /* stylelint-disable */
-  :-ms-fullscreen, :root .contacts__list:nth-child(1n) {
-    margin-right: 10%;
+  :-ms-fullscreen, :root .contacts__list:nth-child(odd)  {
+    margin-right: 28%;
+    margin-left: -10px;
+    transform: translate(63%);
   }
   /* stylelint-enable */
 
