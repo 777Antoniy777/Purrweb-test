@@ -134,6 +134,14 @@
 }
 
 /* stylelint-disable */
+@-moz-document url-prefix() {
+  .offers__add-button svg {
+    top: 3px;
+  }
+}
+/* stylelint-enable */
+
+/* stylelint-disable */
 _:-ms-fullscreen, :root .offers__add-button svg {
   top: 3px;
 }
@@ -243,6 +251,15 @@ _:-ms-fullscreen, :root .offers__add-button svg {
     margin-top: 0;
     transform: scale(3.9);
   }
+
+  /* stylelint-disable */
+  @-moz-document url-prefix() {
+    .offers__add-button svg {
+      top: 25px;
+      left: 35%;
+    }
+  }
+  /* stylelint-enable */
 
   /* stylelint-disable */
   _:-ms-fullscreen, :root .offers__add-button svg {
