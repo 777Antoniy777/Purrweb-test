@@ -119,7 +119,9 @@
 
   /* stylelint-disable */
   :-ms-fullscreen, :root .features__list {
-    width: 67%;
+    justify-content: center;
+    width: 66.4%;
+    margin: 0 auto;
   }
   /* stylelint-enable */
 
