@@ -109,8 +109,7 @@ gulp.task("reload", function(done) {
 
 gulp.task("copy", function() {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/video/**"
+    "source/fonts/**/*.{woff,woff2}"
   ], {
     base: "source"
   })
